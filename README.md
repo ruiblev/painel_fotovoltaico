@@ -1,16 +1,16 @@
-# Photovoltaic Irradiance Simulator
+# Simulador de Irradiância Fotovoltaica
 
-This application is a Streamlit-based simulator for photovoltaic panels and irradiance studies.
+Esta aplicação é um simulador baseado em Streamlit para o estudo de painéis fotovoltaicos e irradiância solar.
 
-## Features
-- Real-time simulation of photovoltaic panel behavior.
-- Interactive lab-style workbench.
-- Comparative analysis of different light filters.
-- Real-time updating of circuit diagrams (V and mA).
+## Funcionalidades
+- Simulação em tempo real do comportamento de painéis fotovoltaicos.
+- Bancada de laboratório interativa.
+- Análise comparativa de diferentes filtros de luz.
+- Atualização em tempo real de esquemas de circuitos (V e mA).
 
-## How to run locally
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the app: `streamlit run app.py`
+## Como executar localmente
+1. Instale as dependências: `pip install -r requirements.txt`
+2. Execute a aplicação: `streamlit run app.py`
 
-## Maintenance
-An automated GitHub Action is configured to perform a dummy commit every 5 hours to keep the Streamlit Cloud deployment active and "warm".
+## Manutenção
+Foi configurada uma GitHub Action automática que realiza um commit fictício de 5 em 5 horas. Isto serve para manter a aplicação no Streamlit Cloud ativa e "quente", evitando que entre em modo de suspensão por inatividade.
