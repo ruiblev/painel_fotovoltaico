@@ -1,0 +1,25 @@
+name: Keep App Alive
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Make a dummy commit
+        run: |
+          date > keep_alive.txt
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add keep_alive.txt
+          git commit -m "Keep alive: $(date)" || echo "No changes to commit"
+          git push
